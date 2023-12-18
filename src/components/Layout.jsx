@@ -2,10 +2,14 @@
 import { Outlet } from 'react-router-dom'
 const Layout = () => {
   return (
-    <>
-          <h1 className='text-6xl font-bold text-center mt-5'>CRM-React</h1>
-          <Outlet />
-    </>
+    <div className='md:flex md:min-h-screen'>
+          <div className='md:w-1/4 bg-blue-900 px-5 py-10'>
+              
+          </div>   
+          <main className='md:3/4 p-10 md:h-screen overflow-scroll'>
+              
+          </main>
+    </div>
   )
 }
 
