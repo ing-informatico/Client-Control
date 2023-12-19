@@ -1,10 +1,11 @@
 import { useLoaderData } from 'react-router-dom'
 import Cliente from '../components/Cliente';
+import { getClientes } from './data/Api';
 
 //Loader
 export function loader() {
-    console.log(import.meta.env.VITE_API_URL);
-    return fetch(`${import.meta.env.VITE_API_URL}/clientes`).then(response => response.json());
+    const clientes = getClientes();
+    return clientes;
 }
 const Index = () => {
 
