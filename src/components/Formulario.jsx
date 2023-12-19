@@ -1,5 +1,5 @@
 
-const Formulario = ({cliente}) => {
+const Formulario = () => {
     return (
         <>
             <div className="mb-4">

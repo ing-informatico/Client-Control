@@ -8,6 +8,7 @@ const Layout = () => {
         <>
             <div className='md:flex md:min-h-screen'>
                 <aside className='md:w-1/4 bg-blue-900 px-5 py-10'>
+                    <img src='../client.png' alt='Logo' className='mx-auto w-16 h-16 rounded-full mb-3'/>
                     <h2 className='text-white text-4xl font-light mb-5 text-center '>Client Control</h2>
                     <nav className='mt-10'>
                         <Link className={`${location.pathname === '/' ? 'bg-blue-700 rounded ' : ''}p-1 text-white block`} to='/'>Clients</Link>

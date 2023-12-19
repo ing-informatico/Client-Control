@@ -1,9 +1,9 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import NuevoCliente from './pages/NuevoCliente';
+import NuevoCliente, {action as newClientAction } from './pages/NuevoCliente';
+import Index, {loader as clientesLoader} from './pages/Index';
 import Layout from './components/Layout';
 import ReactDOM from 'react-dom/client'
-import Index, {loader as clientesLoader} from './pages/Index';
 import './index.css'
 
 const router = createBrowserRouter([
@@ -12,11 +12,14 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        index: true, element: <Index />,
+        index: true,
+        element: <Index />,
         loader: clientesLoader
       },
       {
-        path: '/client/new', element: <NuevoCliente />
+        path: '/client/new',
+        element: <NuevoCliente />,
+        action: newClientAction
       },
     ]
   }
