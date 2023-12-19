@@ -1,0 +1,53 @@
+{
+    "clientes" : [
+        {
+            "id": 1,
+            "nombre": "Juan",
+            "telefono": "102013313",
+            "email": "test1@test.com",
+            "empresa": "Google"
+        },
+        {
+            "id": 2,
+            "nombre": "Pedro",
+            "telefono": "102013313",
+            "email": "test2@test.com",
+            "empresa": "Facebook"
+        },
+        {
+            "id": 3,
+            "nombre": "Pablo",
+            "telefono": "102013313",
+            "email": "test3@test.com",
+            "empresa": "Amazon"
+        },
+        {
+            "id": 4,
+            "nombre": "Luis",
+            "telefono": "102013313",
+            "email": "test4@test.com",
+            "empresa": "Apple"
+        },
+        {
+            "id": 5,
+            "nombre": "Carlos",
+            "telefono": "102013313",
+            "email": "test5@test.com",
+            "empresa": "Microsoft"
+        },
+        {
+            "id": 6,
+            "nombre": "Jorge",
+            "telefono": "102013313",
+            "email": "test6@test.com",
+            "empresa": "Oracle"
+        },
+        {
+            "id": 7,
+            "nombre": "Javier",
+            "telefono": "102013313",
+            "email": "test7@test.com",
+            "empresa": "IBM"
+        }
+    ]
+}

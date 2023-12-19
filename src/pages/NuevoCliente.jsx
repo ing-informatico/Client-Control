@@ -2,15 +2,23 @@ import { Form, useNavigate, useActionData } from 'react-router-dom'
 import Formulario from '../components/Formulario';
 import Errors from '../components/Errors';
 
+//Action
 export async function action({request}) { 
   const formData = await request.formData();
   const datos = Object.fromEntries(formData);
+  const email = formData.get('email');
 
   //Validando el formulario
   const errors = [];
   if (Object.values(datos).includes('')) { 
     errors.push({message: 'All fields are required'});
   }
+
+  let regex = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
+  if (!regex.test(email)) {
+    errors.push({message: 'Invalid email'});
+  }
+
 
   return errors.length > 0 ? errors : null;
 }
@@ -30,7 +38,7 @@ const NuevoCliente = () => {
       </div>
       <div className='bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10'>
         {errors?.length && errors.map((error, i) => (<Errors key={i}>{error.message}</Errors>))}
-        <Form method='post'>
+        <Form method='post' noValidate>
           <Formulario />
           <input type="submit" className='bg-blue-800 w-full mt-5 p-2 text-white uppercase font-bold hover:bg-blue-900' value='Add Client' />
         </Form>
