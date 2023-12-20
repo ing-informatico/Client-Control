@@ -63,7 +63,6 @@ const Formulario = () => {
                     htmlFor="notas"
                 >Notas:</label>
                 <textarea
-                    as="textarea"
                     id="notas"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
