@@ -1,4 +1,4 @@
-import { Form, useNavigate, useActionData } from 'react-router-dom'
+import { Form, useNavigate, useActionData, redirect } from 'react-router-dom'
 import Formulario from '../components/Formulario';
 import Errors from '../components/Errors';
 import { addClient } from './data/Api';
@@ -24,7 +24,7 @@ export async function action({request}) {
   await  addClient(datos);
 
 
-  return errors.length > 0 ? errors : null;
+  return redirect('/', { errors });
 }
 
 
@@ -33,7 +33,6 @@ const NuevoCliente = () => {
   const errors = useActionData();
   const navigate = useNavigate();
 
-  console.log(errors);
   return (
     <>
       <h1 className='text-4xl font-semibold mb-4 text-blue-900'>New Client</h1>
