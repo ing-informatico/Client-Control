@@ -1,6 +1,7 @@
 import { Form, useNavigate, useActionData } from 'react-router-dom'
 import Formulario from '../components/Formulario';
 import Errors from '../components/Errors';
+import { addClient } from './data/Api';
 
 //Action
 export async function action({request}) { 
@@ -19,9 +20,14 @@ export async function action({request}) {
     errors.push({message: 'Invalid email'});
   }
 
+  //Add Client
+  await  addClient(datos);
+
 
   return errors.length > 0 ? errors : null;
 }
+
+
 
 const NuevoCliente = () => {
   const errors = useActionData();
