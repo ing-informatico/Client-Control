@@ -24,6 +24,7 @@ const Index = () => {
                             <th className='w-1/5 py-2'>Company</th>
                             <th className='w-1/5 py-2'>Email</th>
                             <th className='w-1/5 py-2'>Phone</th>
+                            <th className='w-1/5 py-2'>Note</th>
                             <th className='w-1/5 py-2'>Delete</th>
                             <th className='w-1/5 py-2'>Update</th>
                         </tr>

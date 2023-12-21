@@ -11,6 +11,7 @@ const Cliente = ({ cliente }) => {
             empresa: PropTypes.string,
             email: PropTypes.string,
             telefono: PropTypes.string,
+            notas: PropTypes.string,
         }).isRequired,
     };
     return (
@@ -20,6 +21,7 @@ const Cliente = ({ cliente }) => {
                 <td className='border px-4 py-2'>{cliente.empresa}</td>
                 <td className='border px-4 py-2'>{cliente.email}</td>
                 <td className='border px-4 py-2'>{cliente.telefono}</td>
+                <td className='border px-4 py-2'>{cliente.notas}</td>
                 <td className='border px-4 py-2'>
                     <button
                         type='button'

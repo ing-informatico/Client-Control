@@ -5,36 +5,32 @@
       "nombre": "Juan",
       "telefono": "102013313",
       "email": "test1@test.com",
-      "empresa": "Google"
+      "empresa": "Google",
+      "notas": "Nuevo cliente"
     },
     {
       "id": 2,
       "nombre": "Maria",
       "telefono": "202034524",
       "email": "test2@test.com",
-      "empresa": "Microsoft"
+      "empresa": "Microsoft",
+      "notas": "Cliente frecuente"
     },
     {
       "id": 3,
       "nombre": "Pedro",
       "telefono": "302055735",
       "email": "test3@test.com",
-      "empresa": "Apple"
+      "empresa": "Apple",
+      "notas": "Cliente VIP"
     },
     {
       "id": 4,
       "nombre": "Laura",
       "telefono": "402076946",
       "email": "test4@test.com",
-      "empresa": "Amazon"
-    },
-    {
-      "nombre": "John",
-      "empresa": "Teleperformance Colombia",
-      "email": "jhgarzonmedina@hotmail.com",
-      "telefono": "3012939530",
-      "notas": "Nuevo en la empresa",
-      "id": 5
+      "empresa": "Amazon",
+      "notas": "Cliente frecuente"
     }
   ]
 }
