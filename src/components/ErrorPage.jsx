@@ -4,7 +4,6 @@ import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 const ErrorPage = () => {
     const error = useRouteError();
-    console.log(error);
     return (
         <>
             <div className="flex items-center justify-center h-screen bg-gray-100">
