@@ -1,5 +1,12 @@
-import { useNavigate } from 'react-router-dom';
+import { Form, useNavigate, redirect } from 'react-router-dom';
+import { deleteClient } from '../pages/data/Api';
 import PropTypes from 'prop-types';
+
+export async function action({ params }) {
+    deleteClient(params.id);
+
+    return redirect('/');
+}
 
 const Cliente = ({ cliente }) => {
     const navigate = useNavigate();
@@ -32,12 +39,20 @@ const Cliente = ({ cliente }) => {
                     </button>
                 </td>
                 <td className='border px-4 py-2'>
-                    <button
-                        type='button'
-                        className='flex justify-center items-center bg-red-800 py-2 px-4 w-full text-white rounded text-xs uppercase font-bold'
+                    <Form method='POST' action={`/client/${cliente.id}/delete`}
+                        onSubmit={(e) => {
+                            if (!confirm(`Are you sure want to delete this client: ${cliente.nombre}?`)) {
+                                e.preventDefault();
+                            }
+                        }
+                        }
                     >
-                        Delete
-                    </button>
+                        <button
+                            type='submit'
+                            className='flex justify-center items-center bg-red-800 py-2 px-4 w-full text-white rounded text-xs uppercase font-bold'>
+                            Delete
+                        </button>
+                    </Form>
                 </td>
             </tr>
         </>
