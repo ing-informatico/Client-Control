@@ -15,9 +15,14 @@ export async function action({request}) {
     errors.push({message: 'All fields are required'});
   }
 
-  let regex = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
+  let regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
   if (!regex.test(email)) {
-    errors.push({message: 'Invalid email'});
+    errors.push({ message: 'Invalid email' });
+  }
+
+  if (Object.keys(errors).length) {
+    return errors;
   }
 
   //Add Client
